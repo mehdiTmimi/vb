@@ -1,6 +1,5 @@
 Imports System
 imports System.Collections.Generic
-'https://dotnetfiddle.net/B10ox9
 'https://github.com/mehdiTmimi/vb
 Public Class Test
   
@@ -39,11 +38,11 @@ Public Class Test
         end function
 
   end class
+  
     public class Promo
         private nom as String
-        private etudiants as List(of Etudiant)
+		private etudiants as List(of Etudiant)
 
-        'getters and setters
 
         public sub setNom(val as String)
             nom=val
@@ -61,6 +60,30 @@ Public Class Test
     end class
 
     Public Shared Sub Main()
-        Console.WriteLine("salut")
+		'des declarations
+		dim et1 as Etudiant
+		dim et2 as Etudiant
+		dim promo as Promo
+		
+		et1 = new Etudiant()
+		et1.setCne("10212312312")
+		et1.setNom("tmimi")
+		et1.setPrenom("mehdi")
+		
+		et2 = new Etudiant()
+		et2.setCne("143242434")
+		et2.setNom("bennani")
+		et2.setPrenom("hamza")
+		
+		promo=new Promo()
+		promo.setNom("IG 2021")
+		
+		et1.setPromo(promo)
+		et2.setPromo(promo)
+		
+		promo.getEtudiants().Add(et1)
+		promo.getEtudiants().Add(et2)
+		
+		
     end sub
 End Class
