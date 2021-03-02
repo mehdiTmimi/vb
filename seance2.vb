@@ -41,8 +41,7 @@ Public Class Test
   
     public class Promo
         private nom as String
-		private etudiants as List(of Etudiant)
-
+		private etudiants as List(of Etudiant) = new List(of Etudiant)
 
         public sub setNom(val as String)
             nom=val
@@ -63,6 +62,7 @@ Public Class Test
 		'des declarations
 		dim et1 as Etudiant
 		dim et2 as Etudiant
+		dim et3 as Etudiant
 		dim promo as Promo
 		
 		et1 = new Etudiant()
@@ -80,10 +80,12 @@ Public Class Test
 		
 		et1.setPromo(promo)
 		et2.setPromo(promo)
-		
+		et3 = et1
+		et1.setNom("filali")
 		promo.getEtudiants().Add(et1)
 		promo.getEtudiants().Add(et2)
 		
+		Console.WriteLine(" etudiant : " & et3.getNom() & " et nom de la promo est : " & et3.getPromo().getNom())
 		
     end sub
 End Class
