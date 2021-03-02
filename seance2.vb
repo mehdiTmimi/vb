@@ -1,5 +1,7 @@
 Imports System
-
+imports System.Collections.Generic
+'https://dotnetfiddle.net/B10ox9
+'https://github.com/mehdiTmimi/vb
 Public Class Test
   
   public class Etudiant
@@ -59,6 +61,6 @@ Public Class Test
     end class
 
     Public Shared Sub Main()
-        
+        Console.WriteLine("salut")
     end sub
 End Class
